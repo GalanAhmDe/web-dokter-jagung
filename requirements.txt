@@ -9,3 +9,5 @@ gunicorn
 scikit-image
 rembg
 onnxruntime
+torch
+torchvision

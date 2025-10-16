@@ -12,7 +12,7 @@ app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024  # 50MB batas ukuran file
 app.config['MAX_CONTENT_PATH'] = 200 * 1024 * 1024  # 200MB batas total path
 
 # Load model dan label encoder
-model = joblib.load('p_random_forest_model_ratio_0.80_best.pkl')
+model = joblib.load('final_random_forest_model_ratio_0.80_best.pkl')
 label_encoder = joblib.load('label_encoder_ratio_0.80.pkl')
 
 @app.errorhandler(413)

@@ -1,0 +1,382 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+header .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header .nav-links a:hover {
+    color: #d1ffd6;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1500') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.hero form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero form input[type="file"] {
+    display: none;
+}
+
+.hero form .file-upload {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero form .file-upload:hover {
+    background-color: #45a049;
+}
+
+.hero form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero form button:hover {
+    background-color: #555;
+}
+
+/* Result Section */
+.result {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.result h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.result .image-container {
+    max-width: 500px;  /* Lebar maksimum gambar */
+    margin: 0 auto;    /* Pusatkan gambar */
+    margin-bottom: 2rem;
+}
+
+.result .image-container img {
+    width: 100%;       /* Gambar mengisi container */
+    height: auto;      /* Pertahankan aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.result a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.result a:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Probabilities Section */
+.probabilities {
+    margin: 2rem 0;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.probabilities h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.probabilities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.probabilities li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Disease Info Section */
+.disease-info {
+    margin: 2rem 0;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.disease-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-section {
+    margin-bottom: 1.5rem;
+}
+
+.info-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Processed Images Section */
+.processed-images {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.processed-images h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.image-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.image-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Style untuk referensi */
+.reference-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0; /* Hilangkan margin bawah default */
+}
+
+.reference-list li {
+    margin-bottom: 20px;
+}
+
+.reference-list li.last-reference {
+    margin-bottom: 100px;
+}
+
+/* Style untuk tombol kembali */
+.back-button-container {
+    text-align: center;
+    margin-top: 20px;
+    clear: both; /* Pastikan tidak ada float yang mengganggu */
+}
+
+.back-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #e0e0e0;
+}/* Style untuk referensi */
+.reference-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0; /* Hilangkan margin bawah default */
+}
+
+.reference-list li {
+    margin-bottom: 20px;
+}
+
+.reference-list li.last-reference {
+    margin-bottom: 100px;
+}
+
+/* Style untuk tombol kembali */
+.back-button-container {
+    text-align: center;
+    margin-top: 20px;
+    clear: both; /* Pastikan tidak ada float yang mengganggu */
+}
+
+.back-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #e0e0e0;
+}/* Style untuk referensi */
+.reference-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0; /* Hilangkan margin bawah default */
+}
+
+.reference-list li {
+    margin-bottom: 20px;
+}
+
+.reference-list li.last-reference {
+    margin-bottom: 100px;
+}
+
+/* Style untuk tombol kembali */
+.back-button-container {
+    text-align: center;
+    margin-top: 20px;
+    clear: both; /* Pastikan tidak ada float yang mengganggu */
+}
+
+.back-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Tambahkan ini ke style.css Anda */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+.nav-links a.active {
+    color: #4CAF50;
+    font-weight: bold;
+}

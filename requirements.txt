@@ -19,8 +19,8 @@ scikit-image==0.25.2
 onnxruntime==1.23.1
 
 # CPU-only PyTorch
-torch==2.9.0+cpu
-torchvision==0.24.0+cpu
+torch==2.9.0
+torchvision==0.24.0
 -f https://download.pytorch.org/whl/torch_stable.html
 
 # Optional: rembg for background removal

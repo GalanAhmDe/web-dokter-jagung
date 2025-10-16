@@ -4,8 +4,8 @@ import os
 import pandas as pd
 
 # Define paths
-data_path = r"C:\Users\galan\Music\projek_new\hsv"  # Folder gambar HSV
-output_csv_path = r"C:\Users\galan\Music\projek_new\fch.csv"  # File CSV untuk menyimpan fitur FCH
+data_path = r"C:\Users\galan\Music\src\hsv"  # Folder gambar HSV
+output_csv_path = r"C:\Users\galan\Music\src\fch.csv"  # File CSV untuk menyimpan fitur FCH
 
 # Function to apply fuzzy color classification
 def fuzzy_color_classification(hsv_image):

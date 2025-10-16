@@ -1,8 +1,8 @@
 import pandas as pd
 
 # Jalur file CSV
-file_path1 = r'C:\Users\galan\Music\projek_new\lbp_baru.csv'
-file_path2 = r'C:\Users\galan\Music\projek_new\fch.csv'
+file_path1 = r'C:\Users\galan\Music\src\lbp_baru.csv'
+file_path2 = r'C:\Users\galan\Music\src\fch.csv'
 
 # Membaca file CSV dengan delimiter titik koma (;)
 df1 = pd.read_csv(file_path1, delimiter=';')

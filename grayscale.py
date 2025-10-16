@@ -3,8 +3,8 @@ import numpy as np
 import os
 
 # Define paths
-dataset_A_path = r"C:\Users\galan\Music\projek_new\hpsbg"  # Path ke dataset A
-dataset_B_path = r"C:\Users\galan\Music\projek_new\gray"  # Path ke dataset B
+dataset_A_path = r"C:\Users\galan\Music\src\hpsbg"  # Path ke dataset A
+dataset_B_path = r"C:\Users\galan\Music\src\gray"  # Path ke dataset B
 os.makedirs(dataset_B_path, exist_ok=True)  # Buat folder dataset B jika belum ada
 
 # Debug: Tampilkan struktur folder dataset A

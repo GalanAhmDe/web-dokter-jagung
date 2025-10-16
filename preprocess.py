@@ -4,8 +4,8 @@ from rembg import remove
 import torchvision.transforms as transforms
 
 # Jalur input dan output
-data_path = r"C:\Users\galan\Music\projek_new\d_p"
-output_path = r"C:\Users\galan\Music\projek_new\hpsbg"
+data_path = r"C:\Users\galan\Music\src\d_p"
+output_path = r"C:\Users\galan\Music\src\hpsbg"
 
 # Resize ke 256x256
 resize_transform = transforms.Resize((512, 512))

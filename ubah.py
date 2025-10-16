@@ -2,8 +2,8 @@ import pandas as pd
 import locale
 
 # Jalur file CSV
-file_path = r'C:\Users\galan\Music\projek_new\lbp.csv'
-output_path = r'C:\Users\galan\Music\projek_new\lbp_baru.csv'
+file_path = r'C:\Users\galan\Music\src\lbp.csv'
+output_path = r'C:\Users\galan\Music\src\lbp_baru.csv'
 
 # Membaca file CSV dengan delimiter titik koma (;)
 df = pd.read_csv(file_path, delimiter=';')

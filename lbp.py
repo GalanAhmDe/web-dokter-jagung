@@ -5,8 +5,8 @@ import csv
 from skimage.feature import local_binary_pattern
 
 # Define paths
-grayscale_dataset_path = r"C:\Users\galan\Music\projek_new\gray"  # Path ke dataset grayscale
-output_csv_path = r"C:\Users\galan\Music\projek_new\lbp.csv"  # Path untuk menyimpan fitur LBP dalam CSV
+grayscale_dataset_path = r"C:\Users\galan\Music\src\gray"  # Path ke dataset grayscale
+output_csv_path = r"C:\Users\galan\Music\src\lbp.csv"  # Path untuk menyimpan fitur LBP dalam CSV
 
 # Parameters for LBP
 radius = 1  # Radius for LBP

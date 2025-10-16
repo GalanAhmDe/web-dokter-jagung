@@ -8,7 +8,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import classification_report, confusion_matrix, f1_score
 
 # Load data
-data = pd.read_csv(r'C:\Users\galan\Music\projek_new\gabung.csv', sep=';')
+data = pd.read_csv(r'C:\Users\galan\Music\src\gabung.csv', sep=';')
 
 # Pisahkan fitur (X) dan label (y)
 X = data[['LBP_0', 'LBP_1', 'LBP_2', 'LBP_3', 'LBP_4', 'LBP_5', 'LBP_6', 'LBP_7', 'LBP_8', 'LBP_9', 

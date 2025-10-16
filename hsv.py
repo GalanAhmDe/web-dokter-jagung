@@ -2,8 +2,8 @@ import cv2
 import os
 
 # Define paths
-data_path = r"C:\Users\galan\Music\projek_new\hpsbg"  # Folder dataset
-output_hsv_path = r"C:\Users\galan\Music\projek_new\hsv"  # Folder untuk menyimpan gambar HSV
+data_path = r"C:\Users\galan\Music\src\hpsbg"  # Folder dataset
+output_hsv_path = r"C:\Users\galan\Music\src\hsv"  # Folder untuk menyimpan gambar HSV
 os.makedirs(output_hsv_path, exist_ok=True)  # Buat folder jika belum ada
 
 # Function to convert image to HSV

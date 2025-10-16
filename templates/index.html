@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klasifikasi Gambar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Klasifikasi Gambar</div>
+            <ul class="nav-links">
+                <li><a href="/">Single Image</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Dokter Jagung</h1>
+            <p>Unggah gambar daun menggunakan background hitam</p>
+            <form action="/predict" method="post" enctype="multipart/form-data">
+                <label for="file-upload" class="file-upload">Pilih Gambar</label>
+                <input id="file-upload" type="file" name="file" accept="image/*" required>
+                <button type="submit">Klasifikasi</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; made by Galan Ahmad Defanka</p>
+    </footer>
+</body>
+</html>

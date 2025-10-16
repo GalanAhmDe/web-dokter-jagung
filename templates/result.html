@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .bullet-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .bullet-list li {
+            margin-bottom: 5px;
+        }
+        .info-section {
+            margin-bottom: 15px;
+        }
+        .alert {
+            background-color: #ffcccc;
+            color: #a00;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Klasifikasi Gambar</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="result">
+        <h1>Hasil Prediksi</h1>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename=image_path.split('static/')[1]) }}" alt="Uploaded Image">
+        </div>
+        <h2>Predicted Label: {{ label }} ({{ probabilities[label] }})</h2>
+
+        {% if is_tebu %}
+        <div class="alert">
+            ⚠️ Gambar ini terdeteksi sebagai daun <b>Tebu</b>, bukan jagung!
+        </div>
+        {% endif %}
+
+        <div class="processed-images">
+            <h3>Gambar yang Diproses:</h3>
+            <div class="image-grid">
+                <div class="image-item">
+                    <h4>Preprocessed Image</h4>
+                    <img src="{{ url_for('static', filename=preprocessed_image.split('static/')[1]) }}" alt="Preprocessed Image">
+                </div>
+                <div class="image-item">
+                    <h4>HSV Image</h4>
+                    <img src="{{ url_for('static', filename=hsv_image.split('static/')[1]) }}" alt="HSV Image">
+                </div>
+                <div class="image-item">
+                    <h4>Grayscale Image</h4>
+                    <img src="{{ url_for('static', filename=grayscale_image.split('static/')[1]) }}" alt="Grayscale Image">
+                </div>
+            </div>
+        </div>
+
+        <div class="probabilities">
+            <h3>Probabilitas Prediksi:</h3>
+            <ul class="bullet-list">
+                {% for disease, prob in probabilities.items() %}
+                    <li>{{ disease }}: {{ prob }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        {% if not is_tebu %}
+        <div class="disease-info">
+            <h3>Informasi Penyakit:</h3>
+            
+            {% if info.nama_latin %}
+            <div class="info-section">
+                <h4>Nama Latin:</h4>
+                <p>{{ info.nama_latin }}</p>
+            </div>
+            {% endif %}
+            
+            <div class="info-section">
+                <h4>Penyebab:</h4>
+                <ul class="bullet-list">
+                    {% for cause in info.penyebab %}
+                    <li>{{ cause }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <div class="info-section">
+                <h4>Gejala:</h4>
+                <ul class="bullet-list">
+                    {% for symptom in info.gejala %}
+                    <li>{{ symptom }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <div class="info-section">
+                <h4>Pencegahan:</h4>
+                <ul class="bullet-list">
+                    {% for prevention in info.pencegahan %}
+                    <li>{{ prevention }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <div class="info-section">
+                <h4>Penanganan:</h4>
+                <ul class="bullet-list">
+                    {% for treatment in info.penanganan %}
+                    <li>{{ treatment }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <div class="info-section">
+                <h4>Referensi:</h4>
+                <ul class="reference-list">
+                    {% for ref in info.referensi %}
+                    <li class="{% if loop.last %}last-reference{% endif %}">
+                        {% if ref.url %}
+                            <a href="{{ ref.url }}" target="_blank">{{ ref.text }}</a>
+                        {% else %}
+                            {{ ref.text }}
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="back-button-container">
+            <a href="/" class="back-button">Kembali ke Halaman Utama</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; made by Galan Ahmad Defanka</p>
+    </footer>
+</body>
+</html>
